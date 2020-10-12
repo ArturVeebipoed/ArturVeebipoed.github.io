@@ -1,1 +1,91 @@
-Hello World
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>LHV lease</title>
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/lhvlease.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <p class="paymentText">Kuumakse:</p>
+        <p class="paymentNumber">100 €</p>
+
+        <div class="dropdown-div">
+            <select class="dropdown" name="period" id="period">
+                <option value="1">1 kuu</option>
+                <option value="2">2 kuud</option>
+                <option value="3">3 kuud</option>
+                <option value="4">4 kuud</option>
+            </select>
+        </div>
+
+        <!-- Trigger/Open The Modal -->
+        <div class="disclaimer" id="infolink">
+            <p>Tingimused</p>
+        </div>
+
+        <div class="logo">
+            <img src="lhv_badge_en.png" alt="LHV lease" class="contain">
+        </div>
+
+        <!-- The Modal -->
+        <div id="disclaimertxt" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>
+                    Järelmaksu pakub AS LHV Finance. Tutvu tingimustega müügikohas või lhv.ee/jarelmaks ja küsi nõu meie asjatundjalt. Järelmaksu igakuise osamakse suurus on 37,91 € ja krediidi kulukuse määr on 25,59% aastas järgmistel näidistingimustel: kauba/teenuse maksumus
+                    700 €, sissemakse 0%, krediidisumma 700 €, intress 19,9% jäägilt aastas (fikseeritud), lepingutasu 19,9 €, järelmaksu periood 23 kuud, tasumine igakuiste annuiteetmaksetena, maksete kogusumma 871,93 € ja tagasimaksete summa 871,93
+                    €.
+                </p>
+
+                <ul>
+                    <li>Vastus taotlusele mõne minutiga</li>
+                    <li>Krediidisumma 50 - 10 000 €</li>
+                    <li>Sissemakse alates 0 eurost</li>
+                    <li>Kuumakse alatest 1 eurost</li>
+                    <li>Puudub igakuine haldustasu</li>
+                    <li>Tasuta ennetähtaegne tagastamine</li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("disclaimertxt");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("infolink");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
